@@ -35,7 +35,7 @@
 - Advanced -> Firmware Type -> ``BIOS``
 
 ## BIOS
-Customise your BIOS ROM (Or use pre-supplied one from this project):
+Customise your BIOS ROM with ``Phoenix BIOS Editor`` using XP SP2 Compatibility Mode (Or use my pre-supplied one from this project):
 
 ![BIOS](https://i.imgur.com/17yqdbV.png)
 
