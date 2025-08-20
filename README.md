@@ -4,19 +4,19 @@
 - Create New Virtual Machine
   
 ### Wizard Settings:
-- Hardware Compatibility -> Workstation 17+
-- Guest Operating System Installation -> Later
-- Guest Operating System -> Windows -> Windows 7 (Or Above)
-- Name The Virtual Machine -> "Windows Whatever"
-- Location -> Anywhere (This will be where your VMX is located)
-- Processor Configuration -> 1 Processor and 4 Cores
-- Memory -> 8+gb
-- Network Connection -> NAT
-- I/O Controller Type -> LSI Logic SAS
-- Disk Type -> SCSI
-- Select Disk -> New Virtual
-- Disk Capacity 128-256gb - Split Into Multiple Files
-- Disk File -> Whatever
+- Hardware Compatibility -> ``Workstation 17+``
+- Guest Operating System Installation -> ``Later``
+- Guest Operating System -> Windows -> ``Windows 7 (Or Above)``
+- Name The Virtual Machine -> ``Windows Whatever``
+- Location -> ``Anywhere`` (This will be where your VMX is located)
+- Processor Configuration -> ``1 Processor and 4 Cores``
+- Memory -> ``8+gb``
+- Network Connection -> ``NAT``
+- I/O Controller Type -> ``LSI Logic SAS``
+- Disk Type -> ``SCSI``
+- Select Disk -> ``New Virtual``
+- Disk Capacity -> ``128-256gb`` -> ``Split Into Multiple Files``
+- Disk File -> ``Whatever``
 - Finish!
 
 ## VM Settings (Hardware Tab):
@@ -24,14 +24,14 @@
 
 ![Advanced](https://i.imgur.com/PfVCOqJ.png)
 
-- Virtualization Engine -> Intel VT-x/EPT or AMD-V/RVI (Disable Your HV if using Windows Sandbox with the command: ``bcdedit /set hypervisorlaunchtype off``)
-- CD/DVD(SATA) -> Use ISO Image File -> Your Windows ISO
-- Network Adapter -> Avanced Settings -> MAC Address -> Change to FC:34:97:13:33:37 (Anything Other Than VMware Owned Addresses - Don't Click Generate) 
+- Virtualization Engine -> ``Intel VT-x/EPT or AMD-V/RVI`` (Disable Your HV if using Windows Sandbox with the command: ``bcdedit /set hypervisorlaunchtype off``)
+- CD/DVD(SATA) -> Use ISO Image File -> ``Your Windows ISO``
+- Network Adapter -> Advanced Settings -> MAC Address -> Change to ``FC:34:97:13:33:37`` (Anything Other Than VMware Owned Addresses - Don't Click Generate) 
 
 ## VM Settings (Options Tab):
 ![Options](https://i.imgur.com/4vlhgT7.png)
 
-- Advanced -> Firmware Type -> BIOS
+- Advanced -> Firmware Type -> ``BIOS``
 
 ## BIOS
 Customise your BIOS ROM (Or use pre-supplied one from this project):
