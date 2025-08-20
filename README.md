@@ -1,5 +1,6 @@
+# Setting Up VMware For Anti-Anti-VM :)
 
-## Obvious First Steps:
+### Obvious First Steps:
 - Install VMware Workstation Pro
 - Create New Virtual Machine
   
