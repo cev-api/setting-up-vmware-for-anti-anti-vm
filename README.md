@@ -17,7 +17,6 @@
 - Select Disk -> New Virtual
 - Disk Capacity 128-256gb - Split Into Multiple Files
 - Disk File -> Whatever
-
 - Finish!
 
 ## VM Settings (Hardware Tab):
@@ -68,6 +67,14 @@ scsi0:0.productID = "Cevapi5000"
 scsi0:0.vendorID = "Cevapi"
 bios440.filename = "C:\<Whatever>\BIOS.440_Cevapi.ROM"
 ```
+
+## VMware Hardened Loader
+
+This is a very useful tool against VMProtect so I highly suggest using it.
+
+All you have to do is download the ``install.bat``, ``uninstall.bat`` and ``vmloader.sys`` from the ![project's bin folder](https://github.com/hzqst/VmwareHardenedLoader/tree/master/bin) and run it on the VM.
+
+It appears to work on Windows 7 and above.
 
 ## Done!
 
