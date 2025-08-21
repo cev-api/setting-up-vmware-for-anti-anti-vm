@@ -50,7 +50,7 @@ Its presence is a strong indicator the system is a VM, since physical hardware d
 
 So the solution then is to remove WAET entirely or rename its OEM ID. I suggest removing it and renaming the rest of the ACPI entries - they will be different for everybody depending on their setup.
 
-Add my ``ACPI_Cevapi.dat`` or ``ACPI_Cevapi_No_WAET.dat`` to your VMX if you want to add this feature. 
+Add my ``ACPI_Cevapi.dat`` or ``ACPI_Cevapi_No_WAET.dat`` to your VMX if you want to add this feature. If you want to make your own I suggest downloading the ``iASL Compiler and Windows ACPI Tools`` from [Intel's Website](https://www.intel.com/content/www/us/en/developer/topic-technology/open/acpica/download.html)
 
 Note that my ACPI only renames ``WAET``, ``HPET`` and ``SRAT``, if you want rename more entries you will need to do that yourself or add the extra entries to the ``acpi.skiptables`` command instead.
 
