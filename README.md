@@ -48,10 +48,11 @@ Its presence is a strong indicator the system is a VM, since physical hardware d
 ![Before](https://i.imgur.com/JTujmFp.png)
 ![After](https://i.imgur.com/xe5oS8R.png)
 
-So the solution then is to remove WAET entirely or rename its OEM ID. I suggest removing it and renaming the rest of the ACPI entries.
+So the solution then is to remove WAET entirely or rename its OEM ID. I suggest removing it and renaming the rest of the ACPI entries - they will be different for everybody depending on their setup.
 
 Add my ``ACPI_Cevapi.dat`` or ``ACPI_Cevapi_No_WAET.dat`` to your VMX if you want to add this feature. 
-Note that my ACPI only renames HPET and SRAT, if you want rename more entries you will need to do that yourself or add the extra entries to the ``acpi.skiptables`` command instead.
+
+Note that my ACPI only renames ``WAET``, ``HPET`` and ``SRAT``, if you want rename more entries you will need to do that yourself or add the extra entries to the ``acpi.skiptables`` command instead.
 
 ## Customising the .VMX file:
 Add the following to your project's VMX file which is located where you've saved the virtual disk data.
