@@ -41,6 +41,18 @@ Customise your BIOS ROM with ``Phoenix BIOS Editor`` using XP SP2 Compatibility 
 
 ![Custom](https://i.imgur.com/Zp4osMD.png)
 
+## ACPI and WAET
+The WAET (Windows ACPI Emulated Devices Table) is a Microsoft-specific ACPI table that provides performance hints to Windows when running in a virtualized environment. It tells the OS to optimize things like timer usage and device emulation for a hypervisor.
+Its presence is a strong indicator the system is a VM, since physical hardware does not include WAET — it only exists to help Windows perform better on virtual machines.
+
+![Before](https://i.imgur.com/JTujmFp.png)
+![After](https://i.imgur.com/xe5oS8R.png)
+
+So the solution then is to remove WAET entirely or rename its OEM ID. I suggest removing it and renaming the rest of the ACPI entries.
+
+Add my ``ACPI_Cevapi.dat`` or ``ACPI_Cevapi_No_WAET.dat`` to your VMX if you want to add this feature. 
+Note that my ACPI only renames HPET and SRAT, if you want rename more entries you will need to do that yourself or add the extra entries to the ``acpi.skiptables`` command instead.
+
 ## Customising the .VMX file:
 Add the following to your project's VMX file which is located where you've saved the virtual disk data.
 ```
@@ -67,6 +79,8 @@ SMBIOS.noOEMStrings = "TRUE"
 scsi0:0.productID = "Cevapi5000"
 scsi0:0.vendorID = "Cevapi"
 bios440.filename = "C:\<Whatever>\BIOS.440_Cevapi.ROM"
+acpi.skiptables = "WAET,HPET,SRAT,APIC,MCFG,WSMT,SKIP"
+acpi.addtable.filename = "C:\<Whatever>\ACPI_Cevapi_No_WAET.dat"
 ```
 
 ## VMware Hardened Loader
